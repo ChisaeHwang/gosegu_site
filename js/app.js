@@ -1,4 +1,5 @@
 const strClick = document.querySelector(".STR_content > h3");
+const strblock = document.querySelector(".STR_content")
 const mainEven = document.querySelector(".main_content")
 
 TweenMax.from( strClick , 1, {
@@ -18,7 +19,7 @@ strClick.addEventListener("click", function(){
     })
 
     setTimeout(() => {
-        strClick.remove();
+        strblock.remove();
     }, 1000);
 
     TweenMax.to(mainEven, .5, {
