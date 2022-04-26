@@ -12,6 +12,13 @@
   text-transform: capitalize;
 }
 
+html {
+  font-size: 65%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
 body {
   background: #fbe9e7;
 }
@@ -39,8 +46,13 @@ body {
 }
 
 .content_wrap .STR_content h3 {
-  font-size: 5rem;
+  font-size: 10rem;
   cursor: pointer;
+}
+
+.content_wrap .STR_content .Easter_egg {
+  position: absolute;
+  visibility: hidden;
 }
 
 .content_wrap .main_content {
@@ -53,13 +65,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content_wrap .main_content .card {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 40rem;
+  height: 55rem;
   background: #fff;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -122,6 +135,10 @@ body {
           align-items: center;
 }
 
+.content_wrap .main_content .card .details .content h2 {
+  font-size: 5rem;
+}
+
 .content_wrap .main_content .card:hover {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
@@ -130,5 +147,11 @@ body {
 .content_wrap .main_content .card:hover .imgBox {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 55%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
