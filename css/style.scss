@@ -9,11 +9,10 @@ $mobile: "only screen and (max-width: 640px)";
     outline: none; border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .2s linear;
 }
 
 body {
-    background: #f7f7f7;
+    background: #fbe9e7;
 }
 
 .content_wrap {
@@ -22,15 +21,46 @@ body {
     height: 100vh;
 
     .STR_content {
+        position: absolute;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 100;
 
         h3 {
             font-size: 5rem;
             cursor: pointer;
+        }
+    }
+
+    .main_content{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+
+        .card{
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: #fff;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+
+            .details{
+                position: absolute;
+                top: 0%; left: 0%;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }
