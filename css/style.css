@@ -17,6 +17,10 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .Easter_egg {
@@ -32,6 +36,24 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
+}
+
+.content_wrap .angle {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  font-size: 10rem;
+  gap: 120rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
 }
 
 .content_wrap .STR_content {
@@ -72,7 +94,7 @@ body {
 }
 
 .content_wrap .main_content .card {
-  position: relative;
+  position: absolute;
   width: 40rem;
   height: 55rem;
   background: #fff;
@@ -84,6 +106,7 @@ body {
           box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
   -webkit-transition: 1s;
   transition: 1s;
+  cursor: pointer;
 }
 
 .content_wrap .main_content .card .imgBox {
@@ -128,6 +151,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,20 +161,37 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: #fff;
 }
 
 .content_wrap .main_content .card .details .content h2 {
   font-size: 5rem;
 }
 
-.content_wrap .main_content .card:hover {
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-}
-
-.content_wrap .main_content .card:hover .imgBox {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+.content_wrap .main_content .card #Nextcard {
+  z-index: -1;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: #fff;
 }
 
 @media (max-width: 1400px) {
