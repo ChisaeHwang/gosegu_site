@@ -2,8 +2,8 @@ const strClick = document.querySelector(".STR_content > h3");
 const strblock = document.querySelector(".STR_content")
 const mainEven = document.querySelector(".main_content")
 
-TweenMax.from( strClick , 1, {
-    autoAlpha: 0,
+TweenMax.to( strClick , 1, {
+    autoAlpha: 1,
     delay : Math.random()*.5,
     ease:Power3.easeInOut 
 });
