@@ -8,10 +8,6 @@ TweenMax.from( strClick , 1, {
     ease:Power3.easeInOut 
 });
 
-TweenMax.to(mainEven, 0, {
-    autoAlpha: 0,
-})
-
 strClick.addEventListener("click", function(){
     TweenMax.to(strClick, .5, {
         opacity: 0,

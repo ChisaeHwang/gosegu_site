@@ -13,10 +13,15 @@
 }
 
 html {
-  font-size: 65%;
+  font-size: 70%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+}
+
+.Easter_egg {
+  position: absolute;
+  visibility: hidden;
 }
 
 body {
@@ -50,11 +55,6 @@ body {
   cursor: pointer;
 }
 
-.content_wrap .STR_content .Easter_egg {
-  position: absolute;
-  visibility: hidden;
-}
-
 .content_wrap .main_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,6 +67,7 @@ body {
           justify-content: center;
   width: 100vw;
   height: 100vh;
+  opacity: 0;
 }
 
 .content_wrap .main_content .card {
@@ -96,6 +97,8 @@ body {
   background: #000;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+          box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .content_wrap .main_content .card .imgBox img {
