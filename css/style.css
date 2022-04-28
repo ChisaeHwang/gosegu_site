@@ -151,7 +151,6 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
-  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,11 +171,11 @@ body {
   background: #fff;
 }
 
-.content_wrap .main_content .card .details .content h2 {
+.content_wrap .main_content .card .details h2 {
   font-size: 5rem;
 }
 
-.content_wrap .main_content .card #Nextcard {
+.content_wrap .main_content .card #Card {
   z-index: -1;
   position: absolute;
   top: 0%;
@@ -197,6 +196,9 @@ body {
 @media (max-width: 1400px) {
   html {
     font-size: 55%;
+  }
+  .angle {
+    gap: 90rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
