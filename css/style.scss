@@ -68,14 +68,6 @@ body {
         }
     }
 
-    .book:hover .cover{
-        transform: rotateX(20deg) rotateY(-180deg);
-    }
-
-    .book:hover .page{
-        transform: rotateX(20deg) rotateY(-180deg);
-        z-index: 3;
-    }
 
     .book {
         display: flex;

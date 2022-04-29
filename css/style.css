@@ -89,17 +89,6 @@ body {
   opacity: 0;
 }
 
-.content_wrap .book:hover .cover {
-  -webkit-transform: rotateX(20deg) rotateY(-180deg);
-          transform: rotateX(20deg) rotateY(-180deg);
-}
-
-.content_wrap .book:hover .page {
-  -webkit-transform: rotateX(20deg) rotateY(-180deg);
-          transform: rotateX(20deg) rotateY(-180deg);
-  z-index: 3;
-}
-
 .content_wrap .book {
   display: -webkit-box;
   display: -ms-flexbox;
