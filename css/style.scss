@@ -190,7 +190,7 @@ body {
     }
 }
 
-@media #{$mobile}{
+@media (max-width: 450px){
     html {
         font-size: 20%;
     }
