@@ -121,6 +121,8 @@ body {
 
 .content_wrap .book .back-cover {
   z-index: -2;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .content_wrap .book .cover, .content_wrap .book .back-cover {
@@ -161,6 +163,8 @@ body {
   -webkit-transform-origin: center left;
           transform-origin: center left;
   z-index: -1;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .content_wrap .book .last-page img {

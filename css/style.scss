@@ -91,6 +91,7 @@ body {
 
         .back-cover {
             z-index: -2;
+            transition: all 3s;
         }
 
         .cover, .back-cover {
@@ -118,7 +119,7 @@ body {
 
         
         .last-page {
-             width: 38rem;
+            width: 38rem;
             height: 50rem;
             background: white;
             position: absolute;
@@ -126,6 +127,7 @@ body {
             transform: rotateX(20deg);
             transform-origin: center left;
             z-index: -1;
+            transition: all 3s;
             
                 img {
                         width: 70%;
