@@ -1,11 +1,9 @@
 const strClick = document.querySelector(".STR_content > h3");
 const strblock = document.querySelector(".STR_content");
-const mainEven = document.querySelector(".main_content");
-const mainCard = document.querySelector(".main_content > .card");
+const mainEven = document.querySelector(".book");
 const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
-const Cards = document.querySelectorAll("#Card");
 let count = -1;
 
 function* countNum(i) {
@@ -24,7 +22,7 @@ function* countNum(i) {
     for (const a of limit(i.length - 1, infinity())) {
       yield a;
     }
-}
+} 
 
 TweenMax.to( strClick , 1, {
     autoAlpha: 1,
@@ -47,18 +45,15 @@ strClick.addEventListener("click", function(){
         delay : Math.random()*1,
         ease:Power3.easeInOut 
     })
+
+    angle.style.opacity = 1;
 })
 
-mainCard.addEventListener("click", function(){
-    this.style.transform = "translateX(50%)";
-    this.style.cursor = "auto";
-    document.querySelector(".main_content > .card > .imgBox").style.transform = "rotateY(-180deg)";
+mainEven.addEventListener("click", function(){
 
-    TweenMax.to(angle, .5, {
-        autoAlpha: 1,
-        ease:Power3.easeInOut 
-    })
 })
+
+
 
 right.addEventListener("click", function(){
     document.querySelector(".details").style.transform = "rotateY(-180deg)";
