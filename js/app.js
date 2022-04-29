@@ -3,6 +3,7 @@ const strblock = document.querySelector(".STR_content");
 const mainEven = document.querySelector(".book");
 const cover = document.querySelector(".cover");
 const pages = document.querySelectorAll(".page");
+const nextPage = document.querySelectorAll(".nextPage");
 const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
@@ -58,12 +59,14 @@ mainEven.addEventListener("click", function(){
 
 
 right.addEventListener("click", function(){
-    document.querySelector(".details").style.transform = "rotateY(-180deg)";
-    document.querySelector(".details").style.zIndex = 1;
-
+    document.querySelector(".last-page").style.zIndex = 7;
+    document.querySelector(".last-page").style.transform = "rotateX(20deg) rotateY(-180deg)";
+    Promise.resolve(1)
+    .then(a => a + 1)
+    .then(r => nextPage[r].style.transform = "rotateX(20deg) rotateY(-180deg)");
 })
 
 left.addEventListener("click", function(){
-    document.querySelector(".details").style.transform = "rotateY(0deg)";
-    document.querySelector(".details").style.zIndex = 0;
+    document.querySelector(".last-page").style.transform = "rotateX(20deg) rotateY(0deg)";
+    document.querySelector(".last-page").style.zIndex = 7;
 })

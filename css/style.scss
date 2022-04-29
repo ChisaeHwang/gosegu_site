@@ -82,7 +82,7 @@ body {
         }
 
         .back-cover {
-            z-index: -2;
+            z-index: -10;
             transition: all 3s;
         }
 
@@ -127,7 +127,6 @@ body {
                         display: block;
                         border-radius: 20px 20px 20px 20px;
                         margin: 20px auto;
-                        z-index: -1;
                     }
 
                     h2 {
@@ -135,6 +134,18 @@ body {
                         text-align: center;
                     }
             }
+
+        .nextPage{
+            width: 38rem;
+           height: 50rem;
+           background: white;
+           position: absolute;
+           border-radius: 2px 10px 10px 2px;
+           transform: rotateX(20deg);
+           transform-origin: center left;
+           z-index: -3;
+           transition-duration: 3s;
+        }
 
         .page:nth-child(2){
             transition-duration: 3s;
