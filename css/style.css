@@ -242,4 +242,16 @@ body {
     gap: 90rem;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 20%;
+  }
+  .last-page img {
+    margin: 10px auto !important;
+  }
+  .angle {
+    gap: 90rem !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */

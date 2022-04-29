@@ -189,3 +189,15 @@ body {
         gap: 90rem;
     }
 }
+
+@media #{$mobile}{
+    html {
+        font-size: 20%;
+    }
+    .last-page img{
+        margin: 10px auto !important;
+    }
+    .angle {
+        gap: 90rem !important;
+    }
+}
