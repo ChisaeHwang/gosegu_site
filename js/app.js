@@ -30,7 +30,7 @@ TweenMax.to( strClick , 1, {
     ease:Power3.easeInOut 
 });
 
-strClick.addEventListener("click", function(){
+strClick.onclick = () => {
     TweenMax.to(strClick, .5, {
         opacity: 0,
         ease:Power3.easeInOut 
@@ -45,28 +45,26 @@ strClick.addEventListener("click", function(){
         delay : Math.random()*1,
         ease:Power3.easeInOut 
     })
-})
+}
 
-mainEven.addEventListener("click", function(){
+mainEven.onclick = () => {
     cover.style.transform = "rotateX(20deg) rotateY(-180deg)";
     for(const i of countNum(pages)){
         pages[i].style.transform = "rotateX(20deg) rotateY(-180deg)";
         pages[i].style.zIndex = 3;
     }
     angle.style.opacity = 1;
-})
+}
 
-
-
-right.addEventListener("click", function(){
+right.onclick = () => {
     document.querySelector(".last-page").style.zIndex = 7;
     document.querySelector(".last-page").style.transform = "rotateX(20deg) rotateY(-180deg)";
     Promise.resolve(1)
     .then(a => a + 1)
     .then(r => nextPage[r].style.transform = "rotateX(20deg) rotateY(-180deg)");
-})
-
-left.addEventListener("click", function(){
+}
+    
+left.onclick = () => {
     document.querySelector(".last-page").style.transform = "rotateX(20deg) rotateY(0deg)";
     document.querySelector(".last-page").style.zIndex = 7;
-})
+}
