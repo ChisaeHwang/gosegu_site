@@ -13,8 +13,9 @@
 }
 
 html {
-  font-size: 55%;
+  font-size: 80%;
   overflow-x: hidden;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   -webkit-user-select: none;
@@ -236,7 +237,7 @@ body {
 
 @media (max-width: 1400px) {
   html {
-    font-size: 40%;
+    font-size: 60%;
   }
   .angle {
     gap: 90rem;
