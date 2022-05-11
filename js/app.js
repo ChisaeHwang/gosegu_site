@@ -48,9 +48,9 @@ strClick.onclick = () => {
 }
 
 mainEven.onclick = () => {
-    cover.style.transform = "rotateX(20deg) rotateY(-180deg)";
+    cover.style.transform = "rotateX(0deg) rotateY(-180deg)";
     for(const i of countNum(pages)){
-        pages[i].style.transform = "rotateX(20deg) rotateY(-180deg)";
+        pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)";
         pages[i].style.zIndex = 3;
     }
     angle.style.opacity = 1;
@@ -58,13 +58,13 @@ mainEven.onclick = () => {
 
 right.onclick = () => {
     document.querySelector(".last-page").style.zIndex = 7;
-    document.querySelector(".last-page").style.transform = "rotateX(20deg) rotateY(-180deg)";
+    document.querySelector(".last-page").style.transform = "rotateX(0deg) rotateY(-180deg)";
     Promise.resolve(1)
     .then(a => a + 1)
-    .then(r => nextPage[r].style.transform = "rotateX(20deg) rotateY(-180deg)");
+    .then(r => nextPage[r].style.transform = "rotateX(0deg) rotateY(-180deg)");
 }
     
 left.onclick = () => {
-    document.querySelector(".last-page").style.transform = "rotateX(20deg) rotateY(0deg)";
+    document.querySelector(".last-page").style.transform = "rotateX(0deg) rotateY(0deg)";
     document.querySelector(".last-page").style.zIndex = 7;
 }

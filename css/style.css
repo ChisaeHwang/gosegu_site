@@ -123,8 +123,8 @@ body {
   position: absolute;
   -webkit-box-shadow: 1px 1px 10px gray;
           box-shadow: 1px 1px 10px gray;
-  -webkit-transform: rotateX(20deg);
-          transform: rotateX(20deg);
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
   -webkit-transform-origin: center left;
           transform-origin: center left;
 }
@@ -135,8 +135,8 @@ body {
   background: white;
   position: absolute;
   border-radius: 2px 10px 10px 2px;
-  -webkit-transform: rotateX(20deg);
-          transform: rotateX(20deg);
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
   -webkit-transform-origin: center left;
           transform-origin: center left;
   z-index: 0;
@@ -148,8 +148,8 @@ body {
   background: white;
   position: absolute;
   border-radius: 2px 10px 10px 2px;
-  -webkit-transform: rotateX(20deg);
-          transform: rotateX(20deg);
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
   -webkit-transform-origin: center left;
           transform-origin: center left;
   z-index: -1;
@@ -176,8 +176,8 @@ body {
   background: white;
   position: absolute;
   border-radius: 2px 10px 10px 2px;
-  -webkit-transform: rotateX(20deg);
-          transform: rotateX(20deg);
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
   -webkit-transform-origin: center left;
           transform-origin: center left;
   z-index: -3;

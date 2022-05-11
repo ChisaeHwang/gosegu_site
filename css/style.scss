@@ -94,7 +94,7 @@ body {
             border-radius: 2px 20px 20px 2px;
             position: absolute;
             box-shadow: 1px 1px 10px gray;
-            transform: rotateX(20deg);
+            transform: rotateX(0deg);
             transform-origin: center left;
 
         }
@@ -105,7 +105,7 @@ body {
            background: white;
            position: absolute;
            border-radius: 2px 10px 10px 2px;
-           transform: rotateX(20deg);
+           transform: rotateX(0deg);
            transform-origin: center left;
            z-index: 0;
         }
@@ -117,7 +117,7 @@ body {
             background: white;
             position: absolute;
             border-radius: 2px 10px 10px 2px;
-            transform: rotateX(20deg);
+            transform: rotateX(0deg);
             transform-origin: center left;
             z-index: -1;
             transition: all 3s;
@@ -142,7 +142,7 @@ body {
            background: white;
            position: absolute;
            border-radius: 2px 10px 10px 2px;
-           transform: rotateX(20deg);
+           transform: rotateX(0deg);
            transform-origin: center left;
            z-index: -3;
            transition-duration: 3s;
