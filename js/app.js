@@ -7,7 +7,7 @@ const nextPage = document.querySelectorAll(".nextPage");
 const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
-let count = -1;
+
 
 function* countNum(i) {
     function* infinity(i = 0) {
@@ -56,15 +56,25 @@ mainEven.onclick = () => {
     angle.style.opacity = 1;
 }
 
+let count = 0;
+let Zcount = 0;
+
 right.onclick = () => {
-    document.querySelector(".last-page").style.zIndex = 7;
-    document.querySelector(".last-page").style.transform = "rotateX(0deg) rotateY(-180deg)";
-    Promise.resolve(1)
-    .then(a => a + 1)
-    .then(r => nextPage[r].style.transform = "rotateX(0deg) rotateY(-180deg)");
+    count++
+    Zcount = 10;
+    nextPage[count].style.zIndex = Zcount;
+    nextPage[count+1].style.zIndex = Zcount-1;
+    nextPage[count-1].style.zIndex = 1;
+    nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
+    console.log(count);
 }
     
 left.onclick = () => {
-    document.querySelector(".last-page").style.transform = "rotateX(0deg) rotateY(0deg)";
-    document.querySelector(".last-page").style.zIndex = 7;
+    Zcount = 10;
+    nextPage[count].style.zIndex = Zcount;
+    nextPage[count+1].style.zIndex = 1;
+    nextPage[count-1].style.zIndex = Zcount;
+    nextPage[count].style.transform = "rotateX(0deg) rotateY(0deg)";
+    count--;
+    console.log(count);
 }
