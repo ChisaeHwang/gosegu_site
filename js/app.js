@@ -64,7 +64,7 @@ right.onclick = () => {
     Zcount = 10;
     nextPage[count].style.zIndex = Zcount;
     nextPage[count+1].style.zIndex = Zcount-1;
-    nextPage[count-1].style.zIndex = 1;
+    nextPage[count-1].style.zIndex = 2;
     nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
     console.log(count);
 }
@@ -72,8 +72,8 @@ right.onclick = () => {
 left.onclick = () => {
     Zcount = 10;
     nextPage[count].style.zIndex = Zcount;
-    nextPage[count+1].style.zIndex = 1;
-    nextPage[count-1].style.zIndex = Zcount;
+    nextPage[count+1].style.zIndex = 2;
+    nextPage[count-1].style.zIndex = Zcount-1;
     nextPage[count].style.transform = "rotateX(0deg) rotateY(0deg)";
     count--;
     console.log(count);
