@@ -116,6 +116,7 @@ body {
 }
 
 .content_wrap .book .cover h3 {
+  color: #e0e4ee;
   margin-top: 8rem;
   font-size: 3rem;
 }
@@ -168,7 +169,7 @@ body {
           backface-visibility: hidden;
 }
 
-.content_wrap .book #page_0 {
+.content_wrap .book #page_0, .content_wrap .book #page_7 {
   opacity: 0;
 }
 
