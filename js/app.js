@@ -54,6 +54,7 @@ mainEven.onclick = () => {
         pages[i].style.zIndex = 3;
     }
     angle.style.opacity = 1;
+    mainEven.style.cursor = "auto";
 }
 
 let count = 0;

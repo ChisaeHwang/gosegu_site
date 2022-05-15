@@ -31,6 +31,7 @@ html {
 body {
     height: 100vh;
     background: #e0e4ee;
+
 }
 
 .content_wrap {
@@ -150,6 +151,7 @@ body {
                         object-fit: cover;
                         transform-style: preserve-3d;
                         backface-visibility: hidden;
+                        -webkit-user-drag: none;
                     }
 
                     img:nth-child(2) {

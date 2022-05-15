@@ -194,6 +194,7 @@ body {
           transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  -webkit-user-drag: none;
 }
 
 .content_wrap .book .nextPage img:nth-child(2) {
