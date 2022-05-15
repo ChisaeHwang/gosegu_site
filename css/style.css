@@ -107,6 +107,17 @@ body {
   -webkit-transition: all 3s;
   transition: all 3s;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content_wrap .book .cover h3 {
+  margin-top: 8rem;
+  font-size: 3rem;
 }
 
 .content_wrap .book .back-cover {

@@ -81,6 +81,13 @@ body {
         .cover {
             transition: all 3s;
             z-index: 2;
+            display: flex;
+            justify-content: center;
+            
+            h3 {
+                margin-top: 8rem;
+                font-size: 3rem;
+            }
         }
 
         .back-cover {
