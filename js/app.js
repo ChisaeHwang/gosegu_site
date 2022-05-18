@@ -62,31 +62,35 @@ let count = 0;
 let Zcount = 0;
 
     right.onclick = () => {
-        if(button){
-            button = false
-            count++
-            Zcount = 10;
-            nextPage[count].style.zIndex = Zcount;
-            nextPage[count+1].style.zIndex = Zcount-1;
-            nextPage[count-1].style.zIndex = 2;
-            nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
-            console.log(count);
-            setTimeout(() => button = true, 1000);
+        if(count < 6){
+            if(button){
+                button = false
+                count++
+                Zcount = 10;
+                nextPage[count].style.zIndex = Zcount;
+                nextPage[count+1].style.zIndex = Zcount-1;
+                nextPage[count-1].style.zIndex = 2;
+                nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
+                console.log(count);
+                setTimeout(() => button = true, 1000);
+            }
         }
     }
 
         
     left.onclick = () => {
-        if(button){
-            button = false
-            Zcount = 10;
-            nextPage[count].style.zIndex = Zcount;
-            nextPage[count+1].style.zIndex = 2;
-            nextPage[count-1].style.zIndex = Zcount-1;
-            nextPage[count].style.transform = "rotateX(0deg) rotateY(0deg)";
-            count--;
-            console.log(count);
-            setTimeout(() => button = true, 1000);
+        if(count > 0){
+            if(button){
+                button = false
+                Zcount = 10;
+                nextPage[count].style.zIndex = Zcount;
+                nextPage[count+1].style.zIndex = 2;
+                nextPage[count-1].style.zIndex = Zcount-1;
+                nextPage[count].style.transform = "rotateX(0deg) rotateY(0deg)";
+                count--;
+                console.log(count);
+                setTimeout(() => button = true, 1000);
+            }
         }
     }
 
