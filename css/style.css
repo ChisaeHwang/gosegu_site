@@ -143,6 +143,13 @@ body {
           transform: rotateX(0deg);
   -webkit-transform-origin: center left;
           transform-origin: center left;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.content_wrap .book .cover h3, .content_wrap .book .back-cover h3 {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .content_wrap .book .page {

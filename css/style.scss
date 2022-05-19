@@ -109,6 +109,11 @@ body {
             box-shadow: 1px 1px 10px gray;
             transform: rotateX(0deg);
             transform-origin: center left;
+            transform-style: preserve-3d;
+
+            h3 {
+                backface-visibility: hidden;
+            }
 
         }
 
