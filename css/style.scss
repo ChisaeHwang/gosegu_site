@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=East+Sea+Dokdo&display=swap');
 $mobile: "only screen and (max-width: 640px)";
 
 * {
@@ -112,6 +112,9 @@ body {
             transform-style: preserve-3d;
 
             h3 {
+                transition: all 3s;
+                font-family: 'East Sea Dokdo', cursive;
+                font-size: 6rem;
                 backface-visibility: hidden;
             }
 

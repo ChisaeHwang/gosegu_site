@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=East+Sea+Dokdo&display=swap");
 * {
   font-family: 'Nunito', sans-serif;
   margin: 0%;
@@ -148,6 +148,10 @@ body {
 }
 
 .content_wrap .book .cover h3, .content_wrap .book .back-cover h3 {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  font-family: 'East Sea Dokdo', cursive;
+  font-size: 6rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
