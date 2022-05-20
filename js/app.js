@@ -2,6 +2,7 @@ const strClick = document.querySelector(".STR_content > h3");
 const strblock = document.querySelector(".STR_content");
 const mainEven = document.querySelector(".book");
 const cover = document.querySelector(".cover");
+const backCover = document.querySelector(".back-cover")
 const pages = document.querySelectorAll(".page");
 const nextPage = document.querySelectorAll(".nextPage");
 const right = document.querySelector(".angle-right");
@@ -73,7 +74,24 @@ let Zcount = 0;
                 nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
                 console.log(count);
                 setTimeout(() => button = true, 1000);
+
+                if (count == 6){
+                    backCover.style.zIndex = 20;
+                }
             }
+        } else if (count == 6){
+            count++
+            backCover.style.zIndex = 20;
+            backCover.style.transform = "rotateX(0deg) rotateY(-180deg)";
+
+            TweenMax.to(angle, .5, {
+                opacity: 0,
+                ease:Power3.easeInOut 
+            })
+        
+            setTimeout(() => {
+                angle.remove();
+            }, 1000);
         }
     }
 
@@ -90,6 +108,9 @@ let Zcount = 0;
                 count--;
                 console.log(count);
                 setTimeout(() => button = true, 1000);
+                if(count < 6){
+                    backCover.style.zIndex = -10;
+                }
             }
         }
     }
