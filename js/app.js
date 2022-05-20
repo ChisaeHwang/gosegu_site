@@ -84,14 +84,14 @@ let Zcount = 0;
             backCover.style.zIndex = 20;
             backCover.style.transform = "rotateX(0deg) rotateY(-180deg)";
 
-            TweenMax.to(angle, .5, {
+            TweenMax.to(angle, 1.5, {
                 opacity: 0,
                 ease:Power3.easeInOut 
             })
         
             setTimeout(() => {
                 angle.remove();
-            }, 1000);
+            }, 2000);
         }
     }
 
