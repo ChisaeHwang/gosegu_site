@@ -279,6 +279,15 @@ body {
           transition-duration: 4.4s;
 }
 
+@media (max-width: 1600px) {
+  html {
+    font-size: 65%;
+  }
+  .angle {
+    gap: 105rem !important;
+  }
+}
+
 @media (max-width: 1400px) {
   html {
     font-size: 60%;
