@@ -29,6 +29,40 @@ html {
   visibility: hidden;
 }
 
+.rain {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.rain > i {
+  position: absolute;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#348fe4));
+  background: linear-gradient(transparent, #348fe4);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.rain > i:nth-child(3n+1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#86c4ff));
+  background: linear-gradient(transparent, #86c4ff);
+}
+
+.rain > i:nth-child(3n+2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#5090cc));
+  background: linear-gradient(transparent, #5090cc);
+}
+
+.rain > i:nth-child(3n+3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#b9ddff));
+  background: linear-gradient(transparent, #b9ddff);
+}
+
 body {
   height: 100vh;
   background: #e0e4ee;
@@ -127,8 +161,8 @@ body {
 
 .content_wrap .book .back-cover {
   z-index: -10;
-  -webkit-transition: all 5s;
-  transition: all 5s;
+  -webkit-transition: all 3.5s;
+  transition: all 3.5s;
 }
 
 .content_wrap .book .cover, .content_wrap .book .back-cover {
@@ -277,6 +311,28 @@ body {
 .content_wrap .book:hover .page:nth-child(6) {
   -webkit-transition-duration: 4.4s;
           transition-duration: 4.4s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(calc(100vh + 200px));
+            transform: translateY(calc(100vh + 200px));
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(calc(100vh + 200px));
+            transform: translateY(calc(100vh + 200px));
+  }
 }
 
 @media (max-width: 1600px) {

@@ -28,6 +28,33 @@ html {
     visibility: hidden;
 }
 
+.rain {
+    opacity: 0;
+    transition: 2s;
+}
+
+.rain > i {
+    position: absolute;
+    height: 200px;
+    background : linear-gradient(transparent, rgb(52, 143, 228));
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: animate 5s linear infinite;
+    transition: 2s;
+}
+
+.rain > i:nth-child(3n+1){
+    background : linear-gradient(transparent, rgb(134, 196, 255));
+}
+
+.rain > i:nth-child(3n+2){
+    background : linear-gradient(transparent, rgb(80, 144, 204));
+}
+
+.rain > i:nth-child(3n+3){
+    background : linear-gradient(transparent, rgb(185, 221, 255));
+}
+
 body {
     height: 100vh;
     background: #e0e4ee;
@@ -97,7 +124,7 @@ body {
 
         .back-cover {
             z-index: -10;
-            transition: all 5s;
+            transition: all 3.5s;
         }
 
         .cover, .back-cover {
@@ -210,6 +237,18 @@ body {
     }
     .book:hover .page:nth-child(6){
         transition-duration: 4.4s;
+    }
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(-200px);
+    }
+    100%
+    {
+        transform: translateY(calc(100vh + 200px));
     }
 }
 

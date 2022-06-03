@@ -75,10 +75,18 @@ let Zcount = 0;
                 console.log(count);
                 setTimeout(() => button = true, 1000);
 
+                if(3 <= count){
+                    document.querySelector('.rain').style.trasition = '2s';
+                    document.querySelector('.rain').style.opacity = "1"
+                }
+                if(5 <= count){
+                    document.querySelector('.rain').style.opacity = "0"
+                }
                 if (count == 6){
                     backCover.style.zIndex = 20;
                 }
             }
+
         } else if (count == 6){
             count++
             backCover.style.zIndex = 20;
