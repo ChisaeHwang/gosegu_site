@@ -51,11 +51,12 @@ strClick.onclick = () => {
 
 mainEven.onclick = () => {
     cover.style.transform = "rotateX(0deg) rotateY(-180deg)";
+    setTimeout(() => cover.style.zIndex = -3, 1000);
     for(const i of countNum(pages)){
-        pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)";
+        pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)"
         pages[i].style.zIndex = 3;
     }
-    angle.style.opacity = 1;
+    setTimeout(() => angle.style.opacity = 1, 1000);
     mainEven.style.cursor = "auto";
 }
 

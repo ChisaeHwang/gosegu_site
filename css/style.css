@@ -199,6 +199,8 @@ body {
   -webkit-transform-origin: center left;
           transform-origin: center left;
   z-index: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .content_wrap .book #first_page img {
