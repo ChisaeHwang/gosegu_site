@@ -44,8 +44,6 @@ html {
   border-bottom-right-radius: 5px;
   -webkit-animation: animate 5s linear infinite;
           animation: animate 5s linear infinite;
-  -webkit-transition: 2s;
-  transition: 2s;
 }
 
 .rain > i:nth-child(3n+1) {

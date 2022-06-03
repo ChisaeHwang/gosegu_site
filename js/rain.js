@@ -1,12 +1,13 @@
-let amount = 100;
+let amount = 150;
 let rain = document.querySelector('.rain');
 let i =  0;
+let windowWidth;
 
 while(i < amount){
     let drop = document.createElement('i');
 
     let size = Math.random() * 5;
-    let posX = Math.floor(Math.random() * window.innerWidth);
+    let posX = Math.floor(Math.random() * 3000);
     let delay = Math.random() * -20;
     let duration = Math.random() * 5;
 
@@ -18,3 +19,5 @@ while(i < amount){
     rain.appendChild(drop);
     i++;
 }
+
+
