@@ -1,5 +1,5 @@
 let amount = 150;
-let rain = document.querySelector('.rain');
+export const rain = document.querySelector('.rain')
 let i =  0;
 let windowWidth;
 

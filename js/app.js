@@ -10,6 +10,7 @@ const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
 let button = true;
 
+import { rain } from "./rain.js";
 
 function* countNum(i) {
     function* infinity(i = 0) {
@@ -76,11 +77,11 @@ let Zcount = 0;
                 setTimeout(() => button = true, 1000);
 
                 if(3 <= count){
-                    document.querySelector('.rain').style.trasition = '2s';
-                    document.querySelector('.rain').style.opacity = "1"
+                    rain.style.trasition = '2s';
+                    rain.style.opacity = "1"
                 }
                 if(5 <= count){
-                    document.querySelector('.rain').style.opacity = "0"
+                    rain.style.opacity = "0"
                 }
                 if (count == 6){
                     backCover.style.zIndex = 20;
