@@ -155,6 +155,7 @@ body {
            transform: rotateX(0deg);
            transform-origin: center left;
            z-index: 0;
+           box-shadow: none !important;
         }
 
         #first_page{

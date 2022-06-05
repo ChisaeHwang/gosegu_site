@@ -9,7 +9,7 @@ const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
 let button = true;
-
+ 
 import { rain } from "./rain.js";
 
 function* countNum(i) {
@@ -52,12 +52,28 @@ strClick.onclick = () => {
 
 mainEven.onclick = () => {
     cover.style.transform = "rotateX(0deg) rotateY(-180deg)";
+    setTimeout(() => cover.style.zIndex = -3, 1000);
     for(const i of countNum(pages)){
-        pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)";
+        pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)"
         pages[i].style.zIndex = 3;
     }
-    angle.style.opacity = 1;
+    setTimeout(() => angle.style.opacity = 1, 1000);
     mainEven.style.cursor = "auto";
+}
+
+const removeBook = () => {
+    cover.remove();
+    for(const i of countNum(pages)){
+        pages[i].remove();
+    }
+    for(const i of countNum(nextPage)){
+        nextPage[i].remove();
+    }
+
+    backCover.style.width = '55rem';
+    backCover.style.height = '40rem';
+    backCover.style.transform = 'translate(-50%, 0%)';
+    backCover.style.borderRadius = "40px 80px / 80px 40px";
 }
 
 let count = 0;
@@ -85,6 +101,7 @@ let Zcount = 0;
                 }
                 if (count == 6){
                     backCover.style.zIndex = 20;
+                    setTimeout(() => removeBook() , 6000);
                 }
             }
 
