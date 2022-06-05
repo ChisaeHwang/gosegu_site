@@ -101,7 +101,6 @@ let Zcount = 0;
                 }
                 if (count == 6){
                     backCover.style.zIndex = 20;
-                    setTimeout(() => removeBook() , 6000);
                 }
             }
 
@@ -114,6 +113,8 @@ let Zcount = 0;
                 opacity: 0,
                 ease:Power3.easeInOut 
             })
+
+            setTimeout(() => removeBook() , 3500);
         
             setTimeout(() => {
                 angle.remove();
