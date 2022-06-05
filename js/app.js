@@ -9,7 +9,8 @@ const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
 let button = true;
-
+ 
+import { rain } from "./rain.js";
 
 function* countNum(i) {
     function* infinity(i = 0) {
@@ -60,6 +61,21 @@ mainEven.onclick = () => {
     mainEven.style.cursor = "auto";
 }
 
+const removeBook = () => {
+    cover.remove();
+    for(const i of countNum(pages)){
+        pages[i].remove();
+    }
+    for(const i of countNum(nextPage)){
+        nextPage[i].remove();
+    }
+
+    backCover.style.width = '55rem';
+    backCover.style.height = '40rem';
+    backCover.style.transform = 'translate(-50%, 0%)';
+    backCover.style.borderRadius = "40px 80px / 80px 40px";
+}
+
 let count = 0;
 let Zcount = 0;
 
@@ -77,11 +93,11 @@ let Zcount = 0;
                 setTimeout(() => button = true, 1000);
 
                 if(3 <= count){
-                    document.querySelector('.rain').style.trasition = '2s';
-                    document.querySelector('.rain').style.opacity = "1"
+                    rain.style.trasition = '2s';
+                    rain.style.opacity = "1"
                 }
                 if(5 <= count){
-                    document.querySelector('.rain').style.opacity = "0"
+                    rain.style.opacity = "0"
                 }
                 if (count == 6){
                     backCover.style.zIndex = 20;
@@ -97,6 +113,8 @@ let Zcount = 0;
                 opacity: 0,
                 ease:Power3.easeInOut 
             })
+
+            setTimeout(() => removeBook() , 3500);
         
             setTimeout(() => {
                 angle.remove();
