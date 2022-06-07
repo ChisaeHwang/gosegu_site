@@ -8,6 +8,7 @@ const nextPage = document.querySelectorAll(".nextPage");
 const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
+const iframe = document.querySelector("iframe");
 let button = true;
  
 import { rain } from "./rain.js";
@@ -70,6 +71,7 @@ const removeBook = () => {
         nextPage[i].remove();
     }
 
+    iframe.style.opacity = '1';
     backCover.style.width = '55rem';
     backCover.style.height = '40rem';
     backCover.style.transform = 'translate(-50%, 0%)';

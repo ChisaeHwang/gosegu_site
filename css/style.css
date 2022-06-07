@@ -169,8 +169,8 @@ body {
   background: #353755;
   border-radius: 2px 20px 20px 2px;
   position: absolute;
-  -webkit-box-shadow: 1px 1px 10px gray;
-          box-shadow: 1px 1px 10px gray;
+  -webkit-box-shadow: 4px 1px 10px gray;
+          box-shadow: 4px 1px 10px gray;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
   -webkit-transform-origin: center left;
@@ -186,6 +186,24 @@ body {
   font-size: 6rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+.content_wrap .book .cover iframe, .content_wrap .book .back-cover iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3.5rem 2.5rem 3.5rem 5.5rem;
+  width: 80%;
+  height: 80%;
+  border-radius: 40px 80px / 80px 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-user-drag: none;
+  opacity: 0;
 }
 
 .content_wrap .book .page {

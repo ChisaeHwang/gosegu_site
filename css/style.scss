@@ -124,6 +124,7 @@ body {
         .back-cover {
             z-index: -10;
             transition: all 3.5s;
+
         }
 
         .cover, .back-cover {
@@ -132,7 +133,7 @@ body {
             background: #353755;
             border-radius: 2px 20px 20px 2px;
             position: absolute;
-            box-shadow: 1px 1px 10px gray;
+            box-shadow: 4px 1px 10px gray;
             transform: rotateX(0deg);
             transform-origin: center left;
             transform-style: preserve-3d;
@@ -142,6 +143,19 @@ body {
                 font-family: 'East Sea Dokdo', cursive;
                 font-size: 6rem;
                 backface-visibility: hidden;
+            }
+
+             iframe {
+                position: absolute;
+                top: 0; left: 0;
+                margin: 3.5rem 2.5rem 3.5rem 5.5rem;
+                width: 80%; height: 80%;
+                border-radius: 40px 80px / 80px 40px;
+                object-fit: cover;
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                -webkit-user-drag: none;
+                opacity: 0;
             }
 
         }
