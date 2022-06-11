@@ -113,12 +113,7 @@ body {
             z-index: 2;
             display: flex;
             justify-content: center;
-            
-            h3 {
-                color: #e0e4ee;;
-                margin-top: 8rem;
-                font-size: 3rem;
-            }
+    
         }
 
         .back-cover {
@@ -137,9 +132,8 @@ body {
             transform-origin: center left;
             transform-style: preserve-3d;
 
-            h3 {
+            img {
                 transition: all 3s;
-                font-family: 'East Sea Dokdo', cursive;
                 font-size: 6rem;
                 backface-visibility: hidden;
             }

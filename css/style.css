@@ -151,12 +151,6 @@ body {
           justify-content: center;
 }
 
-.content_wrap .book .cover h3 {
-  color: #e0e4ee;
-  margin-top: 8rem;
-  font-size: 3rem;
-}
-
 .content_wrap .book .back-cover {
   z-index: -10;
   -webkit-transition: all 3.5s;
@@ -179,10 +173,9 @@ body {
           transform-style: preserve-3d;
 }
 
-.content_wrap .book .cover h3, .content_wrap .book .back-cover h3 {
+.content_wrap .book .cover img, .content_wrap .book .back-cover img {
   -webkit-transition: all 3s;
   transition: all 3s;
-  font-family: 'East Sea Dokdo', cursive;
   font-size: 6rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
