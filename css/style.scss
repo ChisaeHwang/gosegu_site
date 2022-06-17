@@ -31,9 +31,17 @@ html {
 .rain {
     opacity: 0;
     transition: 2s;
+
+    img {
+        z-index: 0;
+        width: 100vw;
+        top: -5rem;
+        position: absolute;
+    }
 }
 
 .rain > i {
+    z-index: -5;
     position: absolute;
     height: 200px;
     background : linear-gradient(transparent, rgb(52, 143, 228));
