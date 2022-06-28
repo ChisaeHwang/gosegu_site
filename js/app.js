@@ -62,22 +62,6 @@ mainEven.onclick = () => {
     mainEven.style.cursor = "auto";
 }
 
-const removeBook = () => {
-    cover.remove();
-    for(const i of countNum(pages)){
-        pages[i].remove();
-    }
-    for(const i of countNum(nextPage)){
-        nextPage[i].remove();
-    }
-
-    iframe.style.opacity = '1';
-    backCover.style.width = '55rem';
-    backCover.style.height = '40rem';
-    backCover.style.transform = 'translate(-50%, 0%)';
-    backCover.style.borderRadius = "40px 80px / 80px 40px";
-}
-
 let count = 0;
 let Zcount = 0;
 
@@ -116,8 +100,6 @@ let Zcount = 0;
                 ease:Power3.easeInOut 
             })
 
-            setTimeout(() => removeBook() , 3500);
-        
             setTimeout(() => {
                 angle.remove();
             }, 2000);
