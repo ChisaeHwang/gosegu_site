@@ -9,7 +9,9 @@ const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
 const Subtitle = document.querySelector(".Subtitle");
-const title1 = document.querySelector(".Subtitle > h3");
+const Subtitle_h3 = document.querySelector(".Subtitle > h3");
+const Subtitle_first = document.querySelector(".first");
+const Subtitle_second = document.querySelector(".second");
 let button = true;
  
 import { rain } from "./rain.js";
@@ -71,6 +73,23 @@ const outro = () => {
     }, 1500);
 }
 
+let title_count = 0;
+Subtitle.onclick = () => {
+    if(title_count == 0){
+        Subtitle_h3.style.opacity = 0;
+        Subtitle_first.style.opacity = 1;
+    }
+    
+    if(title_count > 0){
+        Subtitle_second.style.opacity = 1;
+        Subtitle_first.style.opacity = 0;
+    }
+
+    title_count++;
+}
+
+
+
 let count = 0;
 let Zcount = 0;
 
@@ -111,7 +130,7 @@ let Zcount = 0;
  
             setTimeout(() => {
                 outro();
-            }, 1000);
+            }, 2500);
 
             setTimeout(() => {
                 angle.remove();
