@@ -8,7 +8,8 @@ const nextPage = document.querySelectorAll(".nextPage");
 const right = document.querySelector(".angle-right");
 const left = document.querySelector(".angle-left");
 const angle = document.querySelector(".angle");
-const iframe = document.querySelector("iframe");
+const Subtitle = document.querySelector(".Subtitle");
+const title1 = document.querySelector(".Subtitle > h3");
 let button = true;
  
 import { rain } from "./rain.js";
@@ -62,6 +63,14 @@ mainEven.onclick = () => {
     mainEven.style.cursor = "auto";
 }
 
+const outro = () => {
+    Subtitle.style.opacity = 1;
+    Subtitle.style.pointerEvents = "auto";
+    setTimeout(() => {
+        Subtitle.style.cursor = "pointer";
+    }, 1500);
+}
+
 let count = 0;
 let Zcount = 0;
 
@@ -99,6 +108,10 @@ let Zcount = 0;
                 opacity: 0,
                 ease:Power3.easeInOut 
             })
+ 
+            setTimeout(() => {
+                outro();
+            }, 1000);
 
             setTimeout(() => {
                 angle.remove();
