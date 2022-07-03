@@ -12,6 +12,8 @@ const Subtitle = document.querySelector(".Subtitle");
 const Subtitle_h3 = document.querySelector(".Subtitle > h3");
 const Subtitle_first = document.querySelector(".first");
 const Subtitle_second = document.querySelector(".second");
+const Subtitle_last = document.querySelector(".last");
+const iframe = document.querySelector('iframe');
 let button = true;
  
 import { rain } from "./rain.js";
@@ -73,6 +75,12 @@ const outro = () => {
     }, 1500);
 }
 
+function button_click() {
+    const node = document.querySelector('#audio_play');
+    node.volume = 1;
+    node.play();
+}
+
 let title_count = 0;
 Subtitle.onclick = () => {
     if(title_count == 0){
@@ -80,9 +88,19 @@ Subtitle.onclick = () => {
         Subtitle_first.style.opacity = 1;
     }
     
-    if(title_count > 0){
+    if(title_count == 1){
         Subtitle_second.style.opacity = 1;
         Subtitle_first.style.opacity = 0;
+    }
+
+    if(title_count == 2){
+        button_click();
+        Subtitle_last.style.opacity = 1;
+        Subtitle.style.cursor = "auto";
+        setTimeout(() => {
+            iframe.style.pointerEvents = "auto";
+            iframe.style.opacity = 1;
+        }, 1500);
     }
 
     title_count++;
