@@ -87,7 +87,7 @@ let count = 0;
 let Zcount = 0;
 
     right.onclick = () => {
-        if(count < 6){
+        if(count < 7){
             if(button){
                 button = false
                 count++
@@ -106,12 +106,12 @@ let Zcount = 0;
                 if(5 <= count){
                     rain.style.opacity = "0"
                 }
-                if (count == 6){
+                if (count == 7){
                     backCover.style.zIndex = 20;
                 }
             }
 
-        } else if (count == 6){
+        } else if (count == 7){
             count++
             backCover.style.zIndex = 20;
             backCover.style.transform = "rotateX(0deg) rotateY(-180deg)";
@@ -144,7 +144,7 @@ let Zcount = 0;
                 count--;
                 console.log(count);
                 setTimeout(() => button = true, 1000);
-                if(count < 6){
+                if(count < 7){
                     backCover.style.zIndex = -10;
                 }
             }
