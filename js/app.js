@@ -1,5 +1,3 @@
-const strClick = document.querySelector(".STR_content > h3");
-const strblock = document.querySelector(".STR_content");
 const mainEven = document.querySelector(".book");
 const cover = document.querySelector(".cover");
 const backCover = document.querySelector(".back-cover")
@@ -32,29 +30,6 @@ function* countNum(i) {
       yield a;
     }
 } 
-
-TweenMax.to( strClick , 1, {
-    autoAlpha: 1,
-    delay : Math.random()*.5,
-    ease:Power3.easeInOut 
-});
-
-strClick.onclick = () => {
-    TweenMax.to(strClick, .5, {
-        opacity: 0,
-        ease:Power3.easeInOut 
-    })
-
-    setTimeout(() => {
-        strblock.remove();
-    }, 1000);
-
-    TweenMax.to(mainEven, .5, {
-        autoAlpha: 1,
-        delay : Math.random()*1,
-        ease:Power3.easeInOut 
-    })
-}
 
 mainEven.onclick = () => {
     cover.style.transform = "rotateX(0deg) rotateY(-180deg)";

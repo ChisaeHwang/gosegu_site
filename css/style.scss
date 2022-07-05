@@ -92,29 +92,12 @@ body {
         }
     }
 
-    .STR_content {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-
-        h3 {
-            font-size: 10rem;
-            cursor: pointer;
-            opacity: 0;
-        }
-    }
-
-
     .book {
         display: flex;
         align-items: center;
         cursor: pointer;
         perspective: 1000px;
-        opacity: 0;
+        opacity: 1;
 
         .cover {
             transition: all 3s;
