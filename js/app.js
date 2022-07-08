@@ -38,12 +38,17 @@ mainEven.onclick = () => {
         pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)"
         pages[i].style.zIndex = 3;
     }
-    setTimeout(() => angle.style.opacity = 1, 1000);
+    setTimeout(() => 
+    angle.style.opacity = 1,
+    angle.style.pointerEvents = "auto"
+    , 1000);
+   
     mainEven.style.cursor = "auto";
 }
 
 const outro = () => {
     Subtitle.style.opacity = 1;
+    Subtitle_first.style.opacity = 1;
     Subtitle.style.pointerEvents = "auto";
     setTimeout(() => {
         Subtitle.style.cursor = "pointer";
@@ -56,12 +61,8 @@ function button_click() {
     node.play();
 }
 
-let title_count = 0;
+let title_count = 1;
 Subtitle.onclick = () => {
-    if(title_count == 0){
-        Subtitle_h3.style.opacity = 0;
-        Subtitle_first.style.opacity = 1;
-    }
     
     if(title_count == 1){
         Subtitle_second.style.opacity = 1;
