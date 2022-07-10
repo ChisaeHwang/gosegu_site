@@ -100,13 +100,11 @@ let Zcount = 0;
                 console.log(count);
                 setTimeout(() => button = true, 1000);
 
-                if(3 <= count){
+                if(1 <= count){
                     rain.style.trasition = '2s';
                     rain.style.opacity = "1"
                 }
-                if(5 <= count){
-                    rain.style.opacity = "0"
-                }
+                
                 if (count == 7){
                     backCover.style.zIndex = 20;
                 }
