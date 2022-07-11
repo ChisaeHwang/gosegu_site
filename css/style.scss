@@ -71,9 +71,22 @@ body {
 .content_wrap {
     display: flex;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
+
+    .vignectting {
+        z-index: -100;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        
+        img {
+            width: 100%;
+            height: auto;
+            opacity: 0.75;
+        }
+    }
 
     .angle {
         width: 100vw;
