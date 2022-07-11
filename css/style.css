@@ -97,7 +97,7 @@ body {
 
 .content_wrap .vignectting img {
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 0.75;
 }
 
