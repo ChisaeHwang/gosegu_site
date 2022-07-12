@@ -115,6 +115,13 @@ let Zcount = 0;
             backCover.style.zIndex = 20;
             backCover.style.transform = "rotateX(0deg) rotateY(-180deg)";
 
+            setTimeout(() => {
+                TweenMax.to(mainEven, 1.5, {
+                    opacity: 0,
+                    ease:Power3.easeInOut 
+                })
+            }, 1500);
+
             TweenMax.to(angle, 1.5, {
                 opacity: 0,
                 ease:Power3.easeInOut 
