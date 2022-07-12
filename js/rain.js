@@ -1,4 +1,4 @@
-let amount = 150;
+let amount = 225;
 export const rain = document.querySelector('.rain')
 let i =  0;
 let windowWidth;
@@ -6,12 +6,10 @@ let windowWidth;
 while(i < amount){
     let drop = document.createElement('i');
 
-    let size = Math.random() * 5;
     let posX = Math.floor(Math.random() * 3000);
     let delay = Math.random() * -20;
-    let duration = Math.random() * 100;
+    let duration = Math.random() * 50;
 
-    drop.style.width = 0.2 + size + 'px';
     drop.style.left = posX + 'px';
     drop.style.animationDelay = delay + 's';
     drop.style.animationDuration = 1 + duration + 's';
@@ -19,5 +17,4 @@ while(i < amount){
     rain.appendChild(drop);
     i++;
 }
-
 

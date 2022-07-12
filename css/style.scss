@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=East+Sea+Dokdo&family=Noto+Serif+KR&display=swap');
+
 $mobile: "only screen and (max-width: 640px)";
 
 * {
@@ -43,23 +44,24 @@ html {
 .rain > i {
     z-index: -5;
     position: absolute;
-    height: 200px;
-    background : linear-gradient(transparent, rgb(52, 143, 228));
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    font-size: 5rem;
+    width: 7.5px;
+    height: 7.5px;
+    background : rgb(179, 179, 179);
+    border-radius: 5px;
     animation: animate 5s linear infinite;
 }
 
 .rain > i:nth-child(3n+1){
-    background : linear-gradient(transparent, rgb(134, 196, 255));
+    background : rgb(206, 197, 197);
 }
 
 .rain > i:nth-child(3n+2){
-    background : linear-gradient(transparent, rgb(80, 144, 204));
+    background : rgb(255, 255, 255);
 }
 
 .rain > i:nth-child(3n+3){
-    background : linear-gradient(transparent, rgb(185, 221, 255));
+    background : rgb(212, 215, 219);
 }
 
 body {
@@ -273,7 +275,7 @@ body {
 
     .Subtitle {
         width: 100%;
-        height: 105%;
+        height: 100%;
         position: absolute;
         display: flex;
         pointer-events: none;
@@ -305,16 +307,14 @@ body {
             justify-content: center;
             margin-bottom: 25rem;
             transition: 1.5s ease-in-out;
-
-            img {
-                height: 300px;
-                width: 300px;
-                margin-bottom: 32rem;
-            }
+            z-index: 10;
 
             h3 {
+                font-family: 'Noto Serif KR', serif;
                 font-size: 3.5rem;
                 position: absolute;
+                color: white;
+                text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
                 z-index: 200;
                 margin-bottom: 8rem;
             }
@@ -330,15 +330,13 @@ body {
             justify-content: center;
             margin-bottom: 25rem;
             transition: 1.5s ease-in-out;
+            z-index: 20;
             
-            img {
-                height: 300px;
-                width: 300px;
-                margin-bottom: 32rem;
-            }
-
             h3 {
+                font-family: 'Noto Serif KR', serif;
                 font-size: 3.5rem;
+                color: white;
+                text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
                 position: absolute;
                 z-index: 200;
                 margin-bottom: 8rem;
@@ -378,11 +376,11 @@ body {
 {
     0%
     {
-        transform: translateY(-200px);
+        transform: translateY(-200px) translateX(0px);;
     }
     100%
     {
-        transform: translateY(calc(100vh + 200px));
+        transform: translateY(calc(100vh + 200px)) translateX(200px);
     }
 }
 

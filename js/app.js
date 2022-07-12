@@ -44,6 +44,9 @@ mainEven.onclick = () => {
     , 1000);
    
     mainEven.style.cursor = "auto";
+
+    rain.style.trasition = '2s';
+    rain.style.opacity = "1"
 }
 
 const outro = () => {
@@ -99,11 +102,6 @@ let Zcount = 0;
                 nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
                 console.log(count);
                 setTimeout(() => button = true, 1000);
-
-                if(1 <= count){
-                    rain.style.trasition = '2s';
-                    rain.style.opacity = "1"
-                }
                 
                 if (count == 7){
                     backCover.style.zIndex = 20;
