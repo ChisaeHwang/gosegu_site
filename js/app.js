@@ -47,12 +47,6 @@ strClick.onclick = () => {
     setTimeout(() => {
         strblock.remove();
     }, 1000);
-
-    TweenMax.to(mainEven, .5, {
-        autoAlpha: 1,
-        delay : Math.random()*1,
-        ease:Power3.easeInOut 
-    })
 }
 
 

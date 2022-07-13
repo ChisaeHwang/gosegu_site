@@ -162,7 +162,7 @@ body {
   cursor: pointer;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .content_wrap .book .cover {
