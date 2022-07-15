@@ -106,6 +106,8 @@ Subtitle.onclick = () => {
     }
 
     if(title_count == 2){
+        background_off();
+ 
         button_click();
         Subtitle_last.style.opacity = 1;
         Subtitle.style.cursor = "auto";
@@ -158,8 +160,6 @@ let Zcount = 0;
                 ease:Power3.easeInOut 
             })
 
-            background_off();
- 
             setTimeout(() => {
                 outro();
             }, 2500);
