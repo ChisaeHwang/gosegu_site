@@ -66,6 +66,8 @@ mainEven.onclick = () => {
 
     rain.style.trasition = '2s';
     rain.style.opacity = "1"
+
+    background_sound();
 }
 
 const outro = () => {
@@ -81,6 +83,18 @@ function button_click() {
     const node = document.querySelector('#audio_play');
     node.volume = 1;
     node.play();
+}
+
+function background_sound() {
+    const node = document.querySelector('#audio_background');
+    node.volume = 0.6;
+    node.play();
+}
+
+function background_off() {
+    const node = document.querySelector('#audio_background');
+    node.volume = 1;
+    node.pause();
 }
 
 let title_count = 1;
@@ -143,6 +157,8 @@ let Zcount = 0;
                 opacity: 0,
                 ease:Power3.easeInOut 
             })
+
+            background_off();
  
             setTimeout(() => {
                 outro();
