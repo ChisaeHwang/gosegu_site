@@ -7,7 +7,7 @@ while(i < amount){
     let drop = document.createElement('i');
 
     let posX = Math.floor(Math.random() * 3000);
-    let delay = Math.random() * -20;
+    let delay = Math.random() * -20;    
     let duration = Math.random() * 50;
 
     drop.style.left = posX + 'px';

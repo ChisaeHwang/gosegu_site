@@ -326,14 +326,11 @@ body {
             transition: 1.5s ease-in-out;
             z-index: 10;
 
-            h3 {
-                font-family: 'Noto Serif KR', serif;
-                font-size: 3.5rem;
+            img:nth-child(2) {
                 position: absolute;
-                color: white;
-                text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
-                z-index: 200;
-                margin-bottom: 8rem;
+                width: 75%;
+                height: 75%;
+                margin-bottom: 2.5rem;
             }
         }
 
@@ -348,15 +345,12 @@ body {
             margin-bottom: 25rem;
             transition: 1.5s ease-in-out;
             z-index: 20;
-            
-            h3 {
-                font-family: 'Noto Serif KR', serif;
-                font-size: 3.5rem;
-                color: white;
-                text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
+
+            img:nth-child(2) {
                 position: absolute;
-                z-index: 200;
-                margin-bottom: 8rem;
+                width: 75%;
+                height: 75%;
+                margin-bottom: 2.5rem;
             }
         }
 

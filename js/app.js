@@ -87,7 +87,7 @@ function button_click() {
 
 function background_sound() {
     const node = document.querySelector('#audio_background');
-    node.volume = 0.6;
+    node.volume = 0.5;
     node.play();
 }
 
