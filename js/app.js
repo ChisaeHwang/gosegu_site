@@ -14,6 +14,7 @@ const Subtitle_first = document.querySelector(".first");
 const Subtitle_second = document.querySelector(".second");
 const Subtitle_last = document.querySelector(".last");
 const iframe = document.querySelector('iframe');
+const first_page = document.querySelector("#page");
 let button = true;
  
 import { rain } from "./rain.js";
@@ -65,7 +66,9 @@ mainEven.onclick = () => {
     mainEven.style.cursor = "auto";
 
     rain.style.trasition = '2s';
-    rain.style.opacity = "1"
+    rain.style.opacity = "1";
+
+    first_page.style.zIndex = '4';
 
     background_sound();
 }
