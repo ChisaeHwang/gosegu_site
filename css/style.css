@@ -420,8 +420,8 @@ body {
 
 .content_wrap .Subtitle .first img:nth-child(2) {
   position: absolute;
-  width: 75%;
-  height: 75%;
+  width: 1920px;
+  height: 1080px;
   margin-bottom: 2.5rem;
 }
 
@@ -447,8 +447,8 @@ body {
 
 .content_wrap .Subtitle .second img:nth-child(2) {
   position: absolute;
-  width: 75%;
-  height: 75%;
+  width: 1920px;
+  height: 1080px;
   margin-bottom: 2.5rem;
 }
 

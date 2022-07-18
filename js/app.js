@@ -65,7 +65,7 @@ mainEven.onclick = () => {
    
     mainEven.style.cursor = "auto";
 
-    rain.style.trasition = '2s';
+    rain.style.trasition = '2s ';
     rain.style.opacity = "1";
 
     background_sound();
@@ -88,13 +88,12 @@ function button_click() {
 
 function background_sound() {
     const node = document.querySelector('#audio_background');
-    node.volume = 0.5;
+    node.volume = 0.3;
     node.play();
 }
 
 function background_off() {
     const node = document.querySelector('#audio_background');
-    node.volume = 1;
     node.pause();
 }
 
