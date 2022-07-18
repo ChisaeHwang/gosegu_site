@@ -68,8 +68,6 @@ mainEven.onclick = () => {
     rain.style.trasition = '2s';
     rain.style.opacity = "1";
 
-    first_page.style.zIndex = '4';
-
     background_sound();
 }
 
