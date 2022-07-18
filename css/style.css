@@ -420,9 +420,9 @@ body {
 
 .content_wrap .Subtitle .first img:nth-child(2) {
   position: absolute;
-  width: 1920px;
-  height: 1080px;
-  margin-bottom: 2.5rem;
+  width: 1440px;
+  height: 810px;
+  margin-bottom: 4rem;
 }
 
 .content_wrap .Subtitle .second {
@@ -447,9 +447,9 @@ body {
 
 .content_wrap .Subtitle .second img:nth-child(2) {
   position: absolute;
-  width: 1920px;
-  height: 1080px;
-  margin-bottom: 2.5rem;
+  width: 1440px;
+  height: 810px;
+  margin-bottom: 4rem;
 }
 
 .content_wrap .Subtitle .last {
