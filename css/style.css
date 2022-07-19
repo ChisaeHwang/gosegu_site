@@ -259,6 +259,26 @@ body {
           box-shadow: none !important;
 }
 
+.content_wrap .book .page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-user-drag: none;
+}
+
+.content_wrap .book .page img:nth-child(2) {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .content_wrap .book #first_page img {
   z-index: -1;
   position: absolute;
