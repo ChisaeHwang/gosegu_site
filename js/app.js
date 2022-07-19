@@ -15,6 +15,8 @@ const Subtitle_second = document.querySelector(".second");
 const Subtitle_last = document.querySelector(".last");
 const iframe = document.querySelector('iframe');
 const first_page = document.querySelector("#page");
+const node = document.querySelector('#audio_background');
+const rangeValue = document.querySelector('input');
 let button = true;
  
 import { rain } from "./rain.js";
@@ -67,8 +69,11 @@ mainEven.onclick = () => {
 
     rain.style.trasition = '2s ';
     rain.style.opacity = "1";
+    
+    rangeValue.style.opacity = '1';
 
     background_sound();
+    
 }
 
 const outro = () => {
@@ -77,7 +82,7 @@ const outro = () => {
     Subtitle.style.pointerEvents = "auto";
     setTimeout(() => {
         Subtitle.style.cursor = "pointer";
-    }, 1500);
+    }, 3000);
 }
 
 function button_click() {
@@ -86,14 +91,18 @@ function button_click() {
     node.play();
 }
 
+document.querySelector('#ex-in').addEventListener('input', e => {
+    document.querySelector('#ex-out');
+    let backValue = e.target.value / 100;
+    node.volume = backValue;
+});
+
 function background_sound() {
-    const node = document.querySelector('#audio_background');
     node.volume = 0.3;
     node.play();
 }
 
 function background_off() {
-    const node = document.querySelector('#audio_background');
     node.pause();
 }
 
@@ -103,6 +112,10 @@ Subtitle.onclick = () => {
     if(title_count == 1){
         Subtitle_second.style.opacity = 1;
         Subtitle_first.style.opacity = 0;
+        Subtitle.style.cursor = "auto";
+        setTimeout(() => {
+            Subtitle.style.cursor = "pointer";
+        }, 3000);
     }
 
     if(title_count == 2){
