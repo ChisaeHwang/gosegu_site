@@ -79,8 +79,8 @@ mainEven.onclick = () => {
 const outro = () => {
     Subtitle.style.opacity = 1;
     Subtitle_first.style.opacity = 1;
-    Subtitle.style.pointerEvents = "auto";
     setTimeout(() => {
+        Subtitle.style.pointerEvents = "auto";
         Subtitle.style.cursor = "pointer";
     }, 3000);
 }
@@ -113,8 +113,10 @@ Subtitle.onclick = () => {
         Subtitle_second.style.opacity = 1;
         Subtitle_first.style.opacity = 0;
         Subtitle.style.cursor = "auto";
+        Subtitle.style.pointerEvents = "none";
         setTimeout(() => {
             Subtitle.style.cursor = "pointer";
+            Subtitle.style.pointerEvents = "auto";
         }, 3000);
     }
 
