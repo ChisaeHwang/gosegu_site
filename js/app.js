@@ -107,9 +107,30 @@ function background_off() {
 }
 
 function pageSound(){
-    const next = document.querySelector('#audio_next');
+    let random = Math.round(Math.random() * 3);
+
+    let next;
+
+    switch(random) {
+        case 0:
+            next = document.querySelector('#audio_next2');
+            break;
+        case 1:
+            next = document.querySelector('#audio_next');
+            break;
+        case 2:
+            next = document.querySelector('#audio_next2');
+            break;
+        case 3:
+            next = document.querySelector('#audio_next3');
+            break;
+        case 4:
+            next = document.querySelector('#audio_next');
+            break;
+    }
     next.volume = 0.5;
     next.play();
+    console.log(next);
 }
 
 let title_count = 1;
