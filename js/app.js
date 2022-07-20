@@ -86,9 +86,9 @@ const outro = () => {
 }
 
 function button_click() {
-    const node = document.querySelector('#audio_play');
-    node.volume = 1;
-    node.play();
+    const outroClick = document.querySelector('#audio_play');
+    outroClick.volume = 1;
+    outroClick.play();
 }
 
 document.querySelector('#ex-in').addEventListener('input', e => {
@@ -104,6 +104,12 @@ function background_sound() {
 
 function background_off() {
     node.pause();
+}
+
+function pageSound(){
+    const next = document.querySelector('#audio_next');
+    next.volume = 0.5;
+    next.play();
 }
 
 let title_count = 1;
@@ -152,6 +158,7 @@ let Zcount = 0;
                 nextPage[count].style.transform = "rotateX(0deg) rotateY(-180deg)";
                 console.log(count);
                 setTimeout(() => button = true, 1000);
+                pageSound();
                 
                 if (count == 7){
                     backCover.style.zIndex = 20;
@@ -198,6 +205,8 @@ let Zcount = 0;
                 count--;
                 console.log(count);
                 setTimeout(() => button = true, 1000);
+                pageSound();
+
                 if(count < 7){
                     backCover.style.zIndex = -10;
                 }
