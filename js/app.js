@@ -60,10 +60,11 @@ mainEven.onclick = () => {
         pages[i].style.transform = "rotateX(0deg) rotateY(-180deg)"
         pages[i].style.zIndex = 3;
     }
-    setTimeout(() => 
+
+    setTimeout(() => {
     angle.style.opacity = 1,
     angle.style.pointerEvents = "auto"
-    , 1000);
+    }, 3500);
    
     mainEven.style.cursor = "auto";
 

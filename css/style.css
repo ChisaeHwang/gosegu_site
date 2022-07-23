@@ -287,6 +287,8 @@ body {
           box-shadow: none !important;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .content_wrap .book .back-cover .backPage img {
