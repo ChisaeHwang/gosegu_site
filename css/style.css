@@ -578,6 +578,7 @@ body {
   width: 75em;
   height: 55rem;
   position: absolute;
+  margin-bottom: 10rem;
 }
 
 .content_wrap .Subtitle .last .video iframe {
