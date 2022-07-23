@@ -92,12 +92,6 @@ function button_click() {
     outroClick.play();
 }
 
-document.querySelector('#ex-in').addEventListener('input', e => {
-    document.querySelector('#ex-out');
-    let backValue = e.target.value / 100;
-    node.volume = backValue;
-});
-
 function background_sound() {
     node.volume = 0.3;
     node.play();
@@ -107,10 +101,10 @@ function background_off() {
     node.pause();
 }
 
+let next;
+
 function pageSound(){
     let random = Math.round(Math.random() * 3);
-
-    let next;
 
     switch(random) {
         case 0:
@@ -129,10 +123,15 @@ function pageSound(){
             next = document.querySelector('#audio_next');
             break;
     }
-    next.volume = 0.5;
     next.play();
-    console.log(next);
 }
+
+document.querySelector('#ex-in').addEventListener('input', e => {
+    document.querySelector('#ex-out');
+    let backValue = e.target.value / 100;
+    node.volume = backValue;
+    next.volume = backValue;
+});
 
 let title_count = 1;
 Subtitle.onclick = () => {
