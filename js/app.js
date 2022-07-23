@@ -64,7 +64,7 @@ mainEven.onclick = () => {
     setTimeout(() => {
     angle.style.opacity = 1,
     angle.style.pointerEvents = "auto"
-    }, 3500);
+    }, 3000);
    
     mainEven.style.cursor = "auto";
 
