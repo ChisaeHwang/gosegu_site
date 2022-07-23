@@ -17,7 +17,9 @@ const iframe = document.querySelector('iframe');
 const first_page = document.querySelector("#page");
 const node = document.querySelector('#audio_background');
 const rangeValue = document.querySelector('input');
+let next = document.querySelector('#audio_next');
 let button = true;
+let backValue = 0.5;
  
 import { rain } from "./rain.js";
 
@@ -74,7 +76,6 @@ mainEven.onclick = () => {
     rangeValue.style.opacity = '1';
 
     background_sound();
-    
 }
 
 const outro = () => {
@@ -101,37 +102,36 @@ function background_off() {
     node.pause();
 }
 
-let next;
+document.querySelector('#ex-in').addEventListener('input', e => {
+    document.querySelector('#ex-out');
+    backValue = e.target.value / 100;
+    node.volume = backValue;
+});
 
 function pageSound(){
+
     let random = Math.round(Math.random() * 3);
+    console.log(random);
 
     switch(random) {
         case 0:
-            next = document.querySelector('#audio_next2');
+            next = document.querySelector('#audio_next');
             break;
         case 1:
-            next = document.querySelector('#audio_next3');
-            break;
-        case 2:
             next = document.querySelector('#audio_next2');
             break;
-        case 3:
+        case 2:
             next = document.querySelector('#audio_next3');
             break;
-        case 4:
+        case 3:
             next = document.querySelector('#audio_next');
             break;
     }
+
+    next.volume = backValue;
+    
     next.play();
 }
-
-document.querySelector('#ex-in').addEventListener('input', e => {
-    document.querySelector('#ex-out');
-    let backValue = e.target.value / 100;
-    node.volume = backValue;
-    next.volume = backValue;
-});
 
 let title_count = 1;
 Subtitle.onclick = () => {
