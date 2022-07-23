@@ -116,7 +116,7 @@ function pageSound(){
             next = document.querySelector('#audio_next2');
             break;
         case 1:
-            next = document.querySelector('#audio_next');
+            next = document.querySelector('#audio_next3');
             break;
         case 2:
             next = document.querySelector('#audio_next2');
